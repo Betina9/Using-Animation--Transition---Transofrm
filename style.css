@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body 
+    /*
+background-color: en eller annen farge så det ikke er hvit!
+Font-family:
+color:
+line-height: 1.6;
+
+}
+
+/*Må ha minst én knapp, én lenke og ett bilde.
+Animer minst ett element med @keyframes, Animasjonen må ha flere trinn (0%, 50%, 100%).
+En hover: farge endring, størrelse
+Må bruke minst én transform (rotate, scale, translate, skew).
+Ett element (for eksempel en knapp) skal:
+Skalere opp og endre farge ved hover.
+Samtidig kan teksten inni fade inn via @keyframes.
+*/
+
+header {
+  background-color: #ffffb5;
+}
+
+main {
+  background: #caffbf;
+}
+
+footer {
+  background-color: #9bf6ff;
+}
