@@ -24,6 +24,22 @@ Samtidig kan teksten inni fade inn via @keyframes.
 
 header {
   background-color: #ffffb5;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: small;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: large;
+  gap: 50px;
 }
 
 main {
