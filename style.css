@@ -39,7 +39,9 @@ h2 {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: large;
-  gap: 50px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  gap: 100px;
 }
 
 main {
