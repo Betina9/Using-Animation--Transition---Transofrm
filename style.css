@@ -50,4 +50,34 @@ main {
 
 footer {
   background-color: #9bf6ff;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+.footerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.social-icons {
+  margin-top: 10px;
+  text-align: center;
+}
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: black;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.social-icons a i {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.social-icons a:hover {
+  color: #ffc6ff;
 }
