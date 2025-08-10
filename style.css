@@ -54,6 +54,8 @@ main {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .intro-copy {
@@ -64,6 +66,8 @@ main {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 /*program*/
