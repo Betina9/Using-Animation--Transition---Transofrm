@@ -48,7 +48,7 @@ main {
   background: #caffbf;
   padding: 20px;
 }
-
+/*Intro del*/
 #intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -66,8 +66,51 @@ main {
   display: block;
 }
 
+/*program*/
+#program {
+  background-color: #ffc6ff; /* Pastell lilla */
+  padding: 40px;
+  text-align: center;
+}
+
+#program h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* Gjør at kortene hopper ned hvis skjermen er liten */
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/*Gjester*/
 #gjester {
-  background: #ffd6ff; /* pastell bakgrunn (kan byttes) */
+  background: #ffd6ff;
   padding: 40px 20px;
   text-align: center;
 }
@@ -96,7 +139,7 @@ main {
 .guest:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
-  border-color: #f3c5ff; /* subtil glød */
+  border-color: #f3c5ff;
 }
 
 .guest img {
@@ -122,6 +165,48 @@ main {
   .guest img {
     height: 200px;
   }
+}
+#show {
+  background-color: #fdffb6;
+  padding: 40px;
+  text-align: center;
+}
+
+.show-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+#startShow {
+  background-color: #ffadad;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#startShow:hover {
+  background-color: #ff7b7b;
+  transform: scale(1.05);
+}
+
+.stage {
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  border: 3px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
 footer {
