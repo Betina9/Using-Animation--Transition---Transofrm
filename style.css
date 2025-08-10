@@ -9,21 +9,25 @@ body header {
   text-align: center;
 }
 
-h2 {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: small;
-}
-
 .navBar {
+  list-style: none;
   display: flex;
   justify-content: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: large;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  gap: 100px;
+  gap: 24px;
+  padding: 10px 0;
+  font-family: "Lucida Sans", "Lucida Grande", Verdana, sans-serif;
+  font-size: 1.1rem;
+}
+.navBar li a {
+  text-decoration: none;
+  color: inherit;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.navBar li a:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
 }
 
 main {
@@ -56,6 +60,31 @@ main {
   display: block;
   border-radius: 8px;
   margin-bottom: 20px;
+}
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#intro-title {
+  animation: fadeSlide 0.6s ease-out 0.1s both;
+}
+.intro-image {
+  overflow: hidden; /* Skjuler zoomede kanter */
+  border-radius: 8px; /* Samme radius som bildet */
+}
+
+.intro-image img {
+  transition: transform 0.4s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.05);
 }
 
 /*program*/
