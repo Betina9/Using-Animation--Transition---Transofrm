@@ -8,7 +8,7 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 />
-    <title>Document</title>
+    <title>Eastercon!</title>
   </head>
   <body>
     <header>
@@ -28,8 +28,10 @@
     <main>
       <section id="intro" aria-labelledby="intro-title">
           <div class="intro-copy">
-        <h2 id="intro-title">Velkommen til eastercon!</h2>
-        <p>Kort info om festivalen insert here.</p>
+        <h1 id="intro-title">Velkommen til eastercon!</h1>
+        <p class="introTekst">EasterCon er Norges største cosplay- og popkulturfestival i påskeferien!
+Her samles cosplayere, fans, kreative sjeler og nysgjerrige besøkende for tre dager med konkurranser, workshops, fotovegger og uforglemmelige øyeblikk.
+Uansett om du kommer for å vise frem ditt eget cosplay, lære nye ferdigheter eller bare oppleve den fantastiske stemningen, er dette stedet å være.</p>
       </div>
       <figure class="intro-image">
 <img src="./images/connor-gan-bAvxyfH-WuY-unsplash.jpg" alt="Convention with many people">
@@ -80,11 +82,12 @@
       <section id="show" aria-labelledby="show-title">
          <h2 id="show-title" class="sr-only">Show</h2>
     <div class="show-row">
-      <button class="btn" id="startShow">Start dansing ✨</button>
-      <div class="stage" aria-live="polite" aria-label="Sceneboks">
-        <img src="./images/Untitled_design__8_-removebg-preview.png" alt="maskot kanin" class="maskot">
-      </div>
+    <input type="checkbox" id="startShow" class="sr-only">
+    <label for="startShow" class="btn" data-start="Start dansing ✨" data-stop="Stopp dansing 🛑"></label>
+    <div class="stage" aria-live="polite" aria-label="Sceneboks">
+      <img src="./images/Untitled_design__8_-removebg-preview.png" alt="Festival maskot" class="maskot">
     </div>
+  </div>
       </section>
     </main>
     <footer>

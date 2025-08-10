@@ -4,25 +4,7 @@
   box-sizing: border-box;
 }
 
-body 
-    /*
-background-color: en eller annen farge så det ikke er hvit!
-Font-family:
-color:
-line-height: 1.6;
-
-}
-
-/*Må ha minst én knapp, én lenke og ett bilde.
-Animer minst ett element med @keyframes, Animasjonen må ha flere trinn (0%, 50%, 100%).
-En hover: farge endring, størrelse
-Må bruke minst én transform (rotate, scale, translate, skew).
-Ett element (for eksempel en knapp) skal:
-Skalere opp og endre farge ved hover.
-Samtidig kan teksten inni fade inn via @keyframes.
-*/
-
-header {
+body header {
   background-color: #ffffb5;
   text-align: center;
 }
@@ -48,18 +30,24 @@ main {
   background: #caffbf;
   padding: 20px;
 }
+
 /*Intro del*/
 #intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 20px;
+  gap: 50px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .intro-copy {
   text-align: left;
+}
+
+#intro p {
+  font-size: 22px;
+  line-height: 1.5;
 }
 
 .intro-image img {
@@ -72,7 +60,7 @@ main {
 
 /*program*/
 #program {
-  background-color: #ffc6ff; /* Pastell lilla */
+  background-color: #ffc6ff;
   padding: 40px;
   text-align: center;
 }
@@ -86,7 +74,7 @@ main {
   display: flex;
   gap: 20px;
   justify-content: center;
-  flex-wrap: wrap; /* Gjør at kortene hopper ned hvis skjermen er liten */
+  flex-wrap: wrap;
 }
 
 .card {
@@ -170,9 +158,21 @@ main {
     height: 200px;
   }
 }
-/*Show- del*/
+/*Maskot som danser*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 #show {
-  background-color: #fdffb6;
+  background: #fdffb6;
   padding: 40px;
   text-align: center;
 }
@@ -185,30 +185,39 @@ main {
   flex-wrap: wrap;
 }
 
-#startShow {
-  background-color: #ffadad;
-  color: black;
-  font-weight: bold;
+.btn {
+  background: #ffadad;
+  color: #000;
+  font-weight: 700;
   font-size: 1.2rem;
   padding: 12px 24px;
   border: none;
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
-#startShow:hover {
-  background-color: #ff7b7b;
+.btn::before {
+  content: attr(data-start);
+}
+
+.btn:hover {
+  background: #ff7b7b;
   transform: scale(1.05);
 }
 
+#startShow:checked + .btn::before {
+  content: attr(data-stop);
+}
+
 .stage {
-  width: 100%;
+  width: 300px;
   height: 200px;
-  background: #fff3;
-  border: 2px solid #ccc;
-  border-radius: 8px;
+  background: #fff;
+  border: 3px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -217,27 +226,31 @@ main {
   width: 80px;
   position: absolute;
   bottom: 0;
-  left: 50%; /* Start i midten */
+  left: 50%;
   transform: translateX(-50%);
+}
+
+#startShow:checked ~ .stage .maskot {
   animation: hop-center 2s infinite ease-in-out;
 }
 
 @keyframes hop-center {
   0%,
   100% {
-    transform: translateX(-50%) translateY(0); /* midten, nede */
+    transform: translateX(-50%) translateY(0);
   }
   25% {
-    transform: translateX(-60%) translateY(-40px); /* litt til venstre, opp */
+    transform: translateX(-60%) translateY(-40px);
   }
   50% {
-    transform: translateX(-40%) translateY(0); /* litt til høyre, nede */
+    transform: translateX(-40%) translateY(0);
   }
   75% {
-    transform: translateX(-60%) translateY(-40px); /* tilbake venstre, opp */
+    transform: translateX(-60%) translateY(-40px);
   }
 }
 
+/*Footer*/
 footer {
   background-color: #9bf6ff;
   color: black;
