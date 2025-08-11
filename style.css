@@ -7,6 +7,7 @@
 body header {
   background-color: #ffffb5;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .navBar {
@@ -14,15 +15,18 @@ body header {
   display: flex;
   justify-content: center;
   gap: 24px;
-  padding: 10px 0;
+  padding: 10px 0px;
   font-family: "Lucida Sans", "Lucida Grande", Verdana, sans-serif;
   font-size: 1.1rem;
 }
 .navBar li a {
   text-decoration: none;
   color: inherit;
+  background-color: #9bf6ff;
   padding: 6px 10px;
+  border: 1px solid black;
   border-radius: 8px;
+  padding: 10px;
   transition: background-color 0.2s, transform 0.2s;
 }
 .navBar li a:hover {
@@ -32,7 +36,8 @@ body header {
 
 main {
   background: #caffbf;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 /*Intro del*/
