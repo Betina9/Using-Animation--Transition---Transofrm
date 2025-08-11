@@ -10,12 +10,29 @@ body header {
   padding-bottom: 20px;
 }
 
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#logo {
+  animation: fadeSlide 0.6s ease-out 0.1s both;
+}
+
+/*Nav lenkene*/
 .navBar {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 24px;
   padding: 10px 0px;
+  margin-top: 30px;
+  gap: 100px;
   font-family: "Lucida Sans", "Lucida Grande", Verdana, sans-serif;
   font-size: 1.1rem;
 }
@@ -24,13 +41,13 @@ body header {
   color: inherit;
   background-color: #9bf6ff;
   padding: 6px 10px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 8px;
-  padding: 10px;
+  padding: 5px 15px;
   transition: background-color 0.2s, transform 0.2s;
 }
 .navBar li a:hover {
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: #a0c4ff;
   transform: translateY(-1px);
 }
 
@@ -80,8 +97,8 @@ main {
   animation: fadeSlide 0.6s ease-out 0.1s both;
 }
 .intro-image {
-  overflow: hidden; /* Skjuler zoomede kanter */
-  border-radius: 8px; /* Samme radius som bildet */
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .intro-image img {
